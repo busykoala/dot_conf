@@ -36,8 +36,9 @@ This repository contains the unified dotfiles for my Linux setup.
 git clone git@github.com:busykoala/dot_conf.git ~/dot_conf
 
 # install packages (for according systems)
-sudo apt-get install $(grep -vE "^\s*#" apt_pkg_list  | tr "\n" " ")
-sudo ./pacman_pkg_install
+sudo apt-get install $(grep -vE "^\s*#" ./pkg_lists/apt_pkg_list  | tr "\n" " ")
+sudo ./pkg_lists/pacman_pkg_install
+choco install .\pkg_lists\choco_pkgs.config -y
 
 # set zshell as default
 chsh -s /usr/bin/zsh
