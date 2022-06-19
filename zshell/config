@@ -63,6 +63,3 @@ export PATH="$FZF_ROOT/bin:$PATH"
 
 # source rust
 source $HOME/.cargo/env
-
-# source poetry
-source $HOME/.poetry/env

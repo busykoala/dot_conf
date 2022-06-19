@@ -13,6 +13,9 @@ export GPG_TTY=$(tty)
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 
+# Add poetry binary to path
+export PATH="$HOME/.poetry/bin:$PATH"
+
 # nodenv (node version manager)
 export NODENV_ROOT="$HOME/.nodenv"
 export PATH="$NODENV_ROOT/bin:$PATH"
