@@ -18,5 +18,7 @@ else
     alias ll='ls -hal'
 fi
 
+alias tclip='tmux show-buffer | xclip -in -sel clip > /dev/null'                                                                                                      ~/dot_conf
+
 # remove orphaned packages using pacman
 alias pacman_clean='(set -x; sudo pacman -Rs $(pacman -Qdtq))'
