@@ -1,0 +1,4 @@
+{
+  "snippets.userSnippetsDirectory": "~/dot_conf/nvim/snips",
+  "python.linting.pylamaEnabled": true
+}

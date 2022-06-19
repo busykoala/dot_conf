@@ -1,0 +1,68 @@
+autoload -U promptinit colors && colors
+promptinit
+
+# set prompt theme
+prompt walters
+PS1='%u%{$reset_color%}$(git_branch_prompt)%{$fg[blue]%}%%>%{$reset_color%} '
+setopt promptsubst
+
+# load functions
+fpath=($HOME/dot_conf/zshell/functions $fpath)
+autoload -U $HOME/dot_conf/zshell/functions/*(:t)
+
+# change directory without cd
+setopt autocd
+
+# stty config (translate carriage return to newline)
+stty icrnl
+
+# HISTORY
+HISTSIZE=3000
+SAVEHIST=3000
+HISTFILE=~/.zsh_history
+bindkey "^[[A" history-beginning-search-backward
+bindkey "^[[B" history-beginning-search-forward
+
+# use the vi navigation keys in menu completion
+zstyle ':completion:*' menu select
+zmodload zsh/complist
+bindkey -M menuselect 'h' vi-backward-char
+bindkey -M menuselect 'k' vi-up-line-or-history
+bindkey -M menuselect 'l' vi-forward-char
+bindkey -M menuselect 'j' vi-down-line-or-history
+
+# Add ssh key pw to keychain and then source
+/usr/bin/keychain --nogui $HOME/.ssh/id_ed25519
+source $HOME/.keychain/$HOST-sh
+
+# init pyenv
+if command -v pyenv 1>/dev/null 2>&1; then
+    eval "$(pyenv init --path)"
+    eval "$(pyenv init -)"
+fi
+
+# init nodenv
+if command -v nodenv 1>/dev/null 2>&1; then
+    eval "$(nodenv init -)"
+fi
+
+# add slash-dot-dot with/after third one
+rationalise-dot() {
+if [[ $LBUFFER != g* && $LBUFFER = *.. ]]; then
+    LBUFFER+=/..
+else
+    LBUFFER+=.
+fi
+}
+zle -N rationalise-dot
+bindkey . rationalise-dot
+
+# fzf
+export FZF_ROOT="$HOME/.fzf"
+export PATH="$FZF_ROOT/bin:$PATH"
+
+# source rust
+source $HOME/.cargo/env
+
+# source poetry
+source $HOME/.poetry/env

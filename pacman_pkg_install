@@ -1,0 +1,36 @@
+# Install Pacman Stuff
+Programs="
+terminator
+git
+gimp
+zsh
+zsh-completions
+copyq
+xclip
+firefox
+ripgrep
+cmake
+base-devel
+make
+libffi
+libyaml
+openssl
+zlib
+java11-openjdk
+pulseaudio-bluetooth
+virtualbox-guest-iso
+virtualbox
+keychain
+exa
+yarn
+owncloud-client
+thunderbird
+dnsutils
+xournalpp
+noto-fonts-emoji
+k9s
+keepassxc
+"
+for val in $Programs; do
+    pacman -S --needed --noconfirm $val
+done

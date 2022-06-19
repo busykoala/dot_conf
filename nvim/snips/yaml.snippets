@@ -1,0 +1,72 @@
+# Online reference: https://github.com/SirVer/ultisnips/blob/master/doc/UltiSnips.txt
+# To find out filetype run this in a file:
+# :CocCommand snippets.editSnippets
+
+snippet namespace "k8s Namespace" b
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: ${1:ns_name}
+endsnippet
+
+snippet service "k8s Service" b
+apiVersion: v1
+kind: Service
+metadata:
+  name: ${1:svc_name}
+spec:
+  selector:
+    app: ${5:svc_target_selector}
+  ports:
+  - port: ${3:svc_port}
+    targetPort: ${4:svc_target_port}
+endsnippet
+
+snippet deployment "k8s Deployment" b
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ${1:dep_name}
+  labels:
+    app: ${2:dep_label}
+spec:
+  replicas: ${3:dep_replicas}
+  selector:
+    matchLabels:
+      app: ${4:pod_label}
+  template:
+    metadata:
+      labels:
+        app: ${5:pod_label}
+    spec:
+      containers:
+      - name: ${6:container_name}
+        image: ${7:image_tag}
+        ports:
+        - containerPort: ${8:exposed_port}
+endsnippet
+
+snippet secret "k8s Secret" b
+apiVersion: v1
+kind: Secret
+metadata:
+  name: ${1:sec_name}
+type: Opaque
+stringData:
+  example: 'data'
+endsnippet
+
+snippet config-map "k8s ConfigMap" b
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ${1:cm_name}
+data:
+  # property-like keys; each key maps to a simple value
+  player_initial_lives: "3"
+  ui_properties_file_name: "user-interface.properties"
+  # file-like keys
+  game.properties: |
+    enemy.types=aliens,monsters
+    player.maximum-lives=5
+endsnippet

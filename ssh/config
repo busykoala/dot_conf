@@ -1,0 +1,16 @@
+Host                    *
+  ForwardAgent          yes
+  ServerAliveInterval   60
+  IdentityFile          ~/.ssh/id_ed25519
+  IgnoreUnknown         UseKeychain
+  UseKeychain           yes
+  AddKeysToAgent        yes
+
+Host                    rootServer
+  Hostname              194.13.82.8
+  User                  root
+  ProxyJump             cockpitServer
+
+Host                    cockpitServer
+  Hostname              194.13.80.17
+  User                  root

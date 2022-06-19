@@ -1,0 +1,18 @@
+[user]
+    name = Matthias Osswald
+    email = matthias@busykoala.io
+    username = busykoala
+    # signingkey = 36B5F98B41732777
+[commit]
+    # gpgsign = true
+[core]
+    editor = nvim
+    whitespace = fix,-indent-with-non-tab,trailing-space,cr-at-eol
+    excludesfile = ~/dot_conf/gitignore
+    hooksPath = ~/dot_conf/githooks
+[branch]
+    autosetuprebase = always
+[format]
+    pretty = %C(blue)%h%Creset %s %C(green)%d%Creset [%C(red)%an%Creset, %C(cyan)%cr%Creset] %C(bold reverse)%N%Creset
+[rerere]
+    enabled = 0

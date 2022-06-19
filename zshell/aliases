@@ -1,0 +1,22 @@
+alias gd="git diff --color"
+alias gdf="git diff --color --cached"
+alias gp="git pull"
+alias gco="git checkout"
+alias gs="git status"
+alias gcm="git commit -m"
+
+alias grep='grep --color'
+
+alias vim='nvim'
+
+# use exa instead of ls if installed
+if hash exa 2>/dev/null; then
+    alias la='exa -hal'
+    alias ll='exa -hal'
+else
+    alias la='ls -hal'
+    alias ll='ls -hal'
+fi
+
+# remove orphaned packages using pacman
+alias pacman_clean='(set -x; sudo pacman -Rs $(pacman -Qdtq))'

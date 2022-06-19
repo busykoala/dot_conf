@@ -1,0 +1,7 @@
+.idea
+busykoala_buildout.cfg
+*.swp
+nohup.out
+tags
+tags.lock
+tags.temp

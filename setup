@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# GIT CONFIG
+ln -sf $HOME/dot_conf/gitconfig $HOME/.gitconfig
+ln -sf $HOME/dot_conf/gitignore $HOME/.gitignore
+
+# SSH CONFIG
+ln -sf $HOME/dot_conf/ssh/config $HOME/.ssh/config
+
+# GPG CONFIG
+ln -sf $HOME/dot_conf/gpg-agent.conf $HOME/gpg-agent.conf
+
+# ZSH CONFIG
+ln -sf $HOME/dot_conf/zshrc $HOME/.zshrc
+
+# EDITORCONFIG
+ln -sf $HOME/dot_conf/editorconfig $HOME/.editorconfig
+
+# SETUP PYTHON CONFIG
+ln -sf $HOME/dot_conf/python/pdbrc $HOME/.pdbrc
+ln -sf $HOME/dot_conf/python/pythonrc $HOME/.pythonrc
+
+# NEOVIM
+mkdir -p $HOME/.config/nvim
+ln -sf $HOME/dot_conf/nvim.vim $HOME/.config/nvim/init.vim
+ln -sf $HOME/dot_conf/nvim/coc-settings.json $HOME/.config/nvim/coc-settings.json
+
+# TMUX CONFIG
+ln -sf $HOME/dot_conf/tmux.conf $HOME/.tmux.conf
