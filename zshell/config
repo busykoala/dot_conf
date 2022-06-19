@@ -32,7 +32,8 @@ bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
 
 # Add ssh key pw to keychain and then source
-/usr/bin/keychain --nogui $HOME/.ssh/id_ed25519
+KEYFILE=~/.ssh/$(ls ~/.ssh | grep id | grep -Ev '*.pub')
+/usr/bin/keychain --nogui $KEYFILE
 source $HOME/.keychain/$HOST-sh
 
 # init pyenv
