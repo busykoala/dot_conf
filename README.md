@@ -1,6 +1,14 @@
-# dot_conf
+# Dot-Conf
 
-This repository contains the unified dotfiles for my Linux setup.
+This repository contains the unified dotfiles.
+
+## Currently Configured:
+
+- Shell (zshell)
+- Terminal Emulator (Alacritty)
+- Terminal Multiplexer (Tmux)
+- Editor (NVim)
+- Others: Git, SSH, Editorconfig, ...
 
 ## Keybindings
 
