@@ -36,6 +36,7 @@ This repository contains the unified dotfiles.
 - `ctrl + a`: leader
 - `leader + |`: vertical split
 - `leader + -`: horizontal split
+- `leader + r`: reload config
 
 ## How to setup
 
