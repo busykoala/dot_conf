@@ -13,8 +13,8 @@ let g:coc_global_extensions = [
 " GENERAL COC-CONFIG
 " -----------------------------------------------------------------------------
 
-" Set python3 interpreter for coc
-let g:python3_host_prog='/usr/bin/python3'
+" Set python3 interpreter for coc (incl. pynvim pkg)
+let g:python3_host_prog='~/bin/nvim-python/bin/python3'
 
 " Use Ctrl + j / Ctrl + k to navigate list
 inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<Tab>"
