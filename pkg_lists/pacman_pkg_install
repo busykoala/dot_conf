@@ -1,6 +1,6 @@
 # Install Pacman Stuff
 Programs="
-terminator
+alacritty
 git
 gimp
 zsh
