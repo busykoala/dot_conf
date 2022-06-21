@@ -11,8 +11,8 @@ alias vim='nvim'
 
 # use exa instead of ls if installed
 if hash exa 2>/dev/null; then
-    alias la='exa -hal'
-    alias ll='exa -hal'
+    alias la='exa -hal --icons'
+    alias ll='exa -hal --icons'
 else
     alias la='ls -hal'
     alias ll='ls -hal'
