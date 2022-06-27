@@ -2,13 +2,20 @@
 " Basic settings (leader, numbers, list...)
 "-------------------------------------------------------------------------------
 syntax on
-colorscheme onedark
+colorscheme PaperColor
 filetype plugin on
 set nu
 set encoding=utf-8
 set t_Co=256
 let mapleader=","
 set clipboard+=unnamedplus
+
+" set light between 6-18
+if system('date +%H') > 6 && system('date +%H') < 18
+    set background=light
+else
+    set background=dark
+endif
 
 " Highlight nonascii characters
 au BufWinEnter * let w:matchnonascii=matchadd('ErrorMsg', "[\x7f-\xff]", -1)

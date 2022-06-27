@@ -9,7 +9,7 @@ endif
 call plug#begin('~/.config/nvim/autoload/plugged')
 
     " Theme
-    Plug 'joshdick/onedark.vim'
+    Plug 'NLKNguyen/papercolor-theme'
 
     " Better Syntax Support
     Plug 'sheerun/vim-polyglot'
