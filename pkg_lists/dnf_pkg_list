@@ -1,0 +1,46 @@
+# utils
+neovim
+ripgrep
+fzf
+tmux
+bat
+exa
+nautilus
+htop
+keychain
+unzip
+xclip
+tmux
+fzf
+ctags
+git-delta
+
+# pyenv install deps
+make
+gcc
+zlib-devel
+bzip2
+bzip2-devel
+readline-devel
+sqlite
+sqlite-devel
+openssl-devel
+tk-devel
+libffi-devel
+xz-devel
+
+# chsh
+util-linux-user
+
+# fonts
+google-noto-emoji-color-fonts
+levien-inconsolata-fonts
+
+# vpn
+wireguard-tools
+
+# password manager
+keepassxc
+
+# java
+java-11-openjdk-devel

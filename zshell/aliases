@@ -8,6 +8,8 @@ alias gcm="git commit -m"
 alias grep='grep --color'
 
 alias vim='nvim'
+alias tf='terraform'
+alias k='kubectl'
 
 # use exa instead of ls if installed
 if hash exa 2>/dev/null; then

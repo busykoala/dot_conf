@@ -32,9 +32,7 @@ bindkey -M menuselect 'l' vi-forward-char
 bindkey -M menuselect 'j' vi-down-line-or-history
 
 # Add ssh key pw to keychain and then source
-KEYFILE=~/.ssh/$(ls ~/.ssh | grep id | grep -Ev '*.pub')
-/usr/bin/keychain --nogui $KEYFILE
-source $HOME/.keychain/$HOST-sh
+source ~/dot_conf/zshell/ssh_add
 
 # init pyenv
 if command -v pyenv 1>/dev/null 2>&1; then
@@ -64,3 +62,6 @@ export PATH="$FZF_ROOT/bin:$PATH"
 
 # source rust
 source $HOME/.cargo/env
+
+# load kubectl zsh completions
+[[ $commands[kubectl] ]] && source <(kubectl completions zsh)
