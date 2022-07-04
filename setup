@@ -5,7 +5,9 @@ ln -sf $HOME/dot_conf/gitconfig $HOME/.gitconfig
 ln -sf $HOME/dot_conf/gitignore $HOME/.gitignore
 
 # SSH CONFIG
-ln -sf $HOME/dot_conf/ssh/config $HOME/.ssh/config
+if [ ! -f "$HOME/.ssh/config" ]; then
+  ln -sf $HOME/dot_conf/ssh/config $HOME/.ssh/config
+fi
 
 # GPG CONFIG
 ln -sf $HOME/dot_conf/gpg-agent.conf $HOME/gpg-agent.conf

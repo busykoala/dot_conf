@@ -22,3 +22,5 @@ alias tclip='tmux show-buffer | xclip -in -sel clip > /dev/null'                
 
 # remove orphaned packages using pacman
 alias pacman_clean='(set -x; sudo pacman -Rs $(pacman -Qdtq))'
+
+alias docker-start='colima start --cpu 4 --memory 16 --disk 60'

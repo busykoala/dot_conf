@@ -48,6 +48,7 @@ git clone git@github.com:busykoala/dot_conf.git ~/dot_conf
 sudo apt-get install $(grep -vE "^\s*#" ./pkg_lists/apt_pkg_list  | tr "\n" " ")
 sudo ./pkg_lists/pacman_pkg_install
 choco install .\pkg_lists\choco_pkgs.config -y
+brew bundle install --file=./pkg_lists/Brewfile
 
 # set zshell as default
 chsh -s /usr/bin/zsh

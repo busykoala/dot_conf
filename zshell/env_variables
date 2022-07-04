@@ -34,3 +34,7 @@ export DOTNET_CLI_TELEMETRY_OPTOUT=1
 
 # make git work throughout mounts
 export GIT_DISCOVERY_ACROSS_FILESYSTEM=1
+
+if [ -f "$HOME/dot_conf/zshell/env_variables_local" ]; then
+  source $HOME/dot_conf/zshell/env_variables_local
+fi
