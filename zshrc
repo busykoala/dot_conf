@@ -10,7 +10,7 @@ if [ -z "$RUNNING" ]; then
     disown
 fi
 
-if [[ $(date '+%H') -gt 6 ]] && [[ $(date '+%H') < 18 ]]
+if [[ $(date +%H) -gt 6 && $(date +%H) -lt 18 ]]
 then
     ln -sf $HOME/dot_conf/alacritty.light.yml $HOME/.alacritty.yml
     sed -i "s/--dark/--light/" ~/dot_conf/gitconfig
