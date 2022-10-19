@@ -64,4 +64,4 @@ export PATH="$FZF_ROOT/bin:$PATH"
 source $HOME/.cargo/env
 
 # load kubectl zsh completions
-[[ $commands[kubectl] ]] && source <(kubectl completions zsh)
+[[ $commands[kubectl] ]] && source <(kubectl completion zsh)
