@@ -31,4 +31,4 @@ ln -sf $HOME/dot_conf/nvim/coc-settings.json $HOME/.config/nvim/coc-settings.jso
 ln -sf $HOME/dot_conf/tmux.conf $HOME/.tmux.conf
 
 # ALACRITTY CONFIG
-ln -sf $HOME/dot_conf/alacritty.yml $HOME/.alacritty.yml
+ln -sf $HOME/dot_conf/alacritty.dark.yml $HOME/.alacritty.yml
