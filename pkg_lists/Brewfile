@@ -15,6 +15,7 @@ brew "ansible"
 brew "ripgrep"
 brew "telnet"
 brew "graphviz"
+brew "postgresql"
 
 cask "keepassxc"
 cask "firefox"
