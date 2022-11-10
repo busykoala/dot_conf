@@ -26,3 +26,6 @@ alias tclip='tmux show-buffer | xclip -in -sel clip > /dev/null'                
 alias pacman_clean='(set -x; sudo pacman -Rs $(pacman -Qdtq))'
 
 alias docker-start='colima start --cpu 4 --memory 16 --disk 60'
+
+# zhaw virtualbox
+alias zhaw_kali="ssh -p 2222 kali@localhost"

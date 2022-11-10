@@ -11,11 +11,12 @@ let mapleader=","
 set clipboard+=unnamedplus
 
 " set light between 6-18
-if system('date +%H') > 6 && system('date +%H') < 18
-    set background=light
-else
-    set background=dark
-endif
+" if system('date +%H') > 6 && system('date +%H') < 18
+    " set background=light
+" else
+    " set background=dark
+" endif
+set background=dark
 
 " Highlight nonascii characters
 au BufWinEnter * let w:matchnonascii=matchadd('ErrorMsg', "[\x7f-\xff]", -1)
