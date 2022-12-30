@@ -25,6 +25,7 @@ unzip
 xclip
 tmux
 fzf
+grc
 
 # ssh key handling
 keychain

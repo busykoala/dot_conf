@@ -12,6 +12,7 @@ unzip
 xclip
 tmux
 fzf
+grc
 ctags
 git-delta
 
