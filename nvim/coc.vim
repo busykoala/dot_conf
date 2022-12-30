@@ -17,17 +17,17 @@ let g:coc_global_extensions = [
 let g:python3_host_prog='~/bin/nvim-python/bin/python3'
 
 " Use Ctrl + j / Ctrl + k to navigate list
-inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <silent><expr> <C-j>
+      \ coc#pum#visible() ? coc#pum#next(1) :
+      \ CheckBackspace() ? "\<Tab>" :
+      \ coc#refresh()
+inoremap <expr><C-k> coc#pum#visible() ? coc#pum#prev(1) : "\<C-k>"
 
 " Suggested in example configuration:
 " https://github.com/neoclide/coc.nvim#example-vim-configuration
-set hidden
 set nobackup
 set nowritebackup
-set cmdheight=1
 set updatetime=300
-set shortmess+=c
 set signcolumn=yes
 
 " GoTo code navigation.

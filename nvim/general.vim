@@ -69,3 +69,5 @@ autocmd VimEnter * wincmd p
 map <C-N> :NERDTreeToggle<CR>
 map <C-E> :NERDTreeFind<CR>
 let NERDTreeQuitOnOpen = 1
+" https://github.com/preservim/nerdtree/issues/1321#issuecomment-1229071986
+let g:NERDTreeMinimalMenu=1
