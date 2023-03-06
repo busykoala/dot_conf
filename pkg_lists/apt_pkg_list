@@ -33,7 +33,7 @@ keychain
 # nvim and ripgrep used there
 neovim
 ripgrep
-ctags
+universal-ctags
 
 # java
 default-jre
