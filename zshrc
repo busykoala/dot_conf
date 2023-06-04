@@ -14,3 +14,7 @@ ln -sf $HOME/dot_conf/alacritty.dark.yml $HOME/.alacritty.yml
 sed -i "s/--light/--dark/" ~/dot_conf/gitconfig
 
 set -o vi
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /usr/bin/terraform terraform
+export PATH=$PATH:/usr/local/go/bin

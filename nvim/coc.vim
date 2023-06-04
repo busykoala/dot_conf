@@ -2,11 +2,12 @@
 " INSTALL EXTENSIONS
 " -----------------------------------------------------------------------------
 let g:coc_global_extensions = [
-  \ 'coc-snippets',
   \ 'coc-pyright',
   \ 'coc-tsserver',
   \ 'coc-vetur',
   \ 'coc-clangd',
+  \ 'coc-rust-analyzer',
+  \ 'coc-yaml',
   \ ]
 
 " -----------------------------------------------------------------------------
@@ -39,9 +40,3 @@ nmap <silent> gr <Plug>(coc-references)
 nmap <leader>rn <Plug>(coc-rename)
 " Remap keys for applying codeAction to the current buffer.
 nmap <leader>ac  <Plug>(coc-codeaction)
-
-" -----------------------------------------------------------------------------
-" COC-SNIPPETS CONFIG
-" -----------------------------------------------------------------------------
-" Use <C-l> for trigger snippet expand.
-imap <C-l> <Plug>(coc-snippets-expand)

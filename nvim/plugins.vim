@@ -31,13 +31,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Rainbow brackets
     Plug 'frazrepo/vim-rainbow'
 
-    " Auto create ctags
-    Plug 'ludovicchabant/vim-gutentags'
-
     " Coc
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-    " Snippets (integrated by coc-snippets)
-    Plug 'honza/vim-snippets'
+    " Copilot
+    Plug 'github/copilot.vim'
 
 call plug#end()

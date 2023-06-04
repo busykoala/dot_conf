@@ -18,7 +18,6 @@ This repository contains the unified dotfiles.
 - `ctrl + f`: Files
 - `leader + b`: Buffers
 - `leader + g`: Fulltext (ripgrep)
-- `leader + t`: Tags (gutenberg tags)
 - `leader + m`: Marks
 - `leader + v`: vertical split
 - `leader + h`: horizontal split

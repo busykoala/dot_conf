@@ -1,4 +1,8 @@
 {
   "snippets.userSnippetsDirectory": "~/dot_conf/nvim/snips",
-  "python.linting.pylamaEnabled": true
+  "python.linting.pylamaEnabled": true,
+  "snippets.ultisnips.pythonPrompt": false,
+  "yaml.schemas": {
+      "kubernetes": ["/*.yaml"]
+  }
 }

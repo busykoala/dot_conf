@@ -4,18 +4,13 @@
 syntax on
 colorscheme PaperColor
 filetype plugin on
+filetype plugin indent on
 set nu
 set encoding=utf-8
 set t_Co=256
 let mapleader=","
 set clipboard+=unnamedplus
 
-" set light between 6-18
-" if system('date +%H') > 6 && system('date +%H') < 18
-    " set background=light
-" else
-    " set background=dark
-" endif
 set background=dark
 
 " Highlight nonascii characters
@@ -37,7 +32,6 @@ let g:rainbow_active = 1
 map <C-f> :Files<CR>
 map <leader>b :Buffers<CR>
 nnoremap <leader>g :Rg<CR>
-nnoremap <leader>t :Tags<CR>
 nnoremap <leader>m :Marks<CR>
 
 "-------------------------------------------------------------------------------
@@ -71,3 +65,9 @@ map <C-E> :NERDTreeFind<CR>
 let NERDTreeQuitOnOpen = 1
 " https://github.com/preservim/nerdtree/issues/1321#issuecomment-1229071986
 let g:NERDTreeMinimalMenu=1
+
+"-------------------------------------------------------------------------------
+" Copilot conf
+"-------------------------------------------------------------------------------
+imap <silent><script><expr> <C-L> copilot#Accept("\<CR>")
+let g:copilot_no_tab_map = v:true
