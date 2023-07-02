@@ -3,6 +3,17 @@
   "python.linting.pylamaEnabled": true,
   "snippets.ultisnips.pythonPrompt": false,
   "yaml.schemas": {
-      "kubernetes": ["/*.yaml"]
+      "kubernetes": [
+          "/**/*.yaml",
+          "!/Chart.yaml",
+          "!/*values*.yaml",
+          "!/docker-compose.yaml"
+      ],
+      "https://json.schemastore.org/chart.json": [
+          "/Chart.yaml"
+      ],
+      "https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json": [
+          "/docker-compose.yaml"
+      ]
   }
 }
